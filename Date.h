@@ -1,7 +1,7 @@
 #ifndef DATE_H
 #define Date_H
 
-#include <strings>
+#include <string>
 
 using namespace std;
 
