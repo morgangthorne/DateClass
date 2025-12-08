@@ -3,6 +3,8 @@
 
 #include <strings>
 
+using namespace std;
+
 class Date {
 public:
 
@@ -21,10 +23,17 @@ public:
 	int GetYear() const;
 
 	//Leap year overloads
+	bool IsLeapYear() const;
+	static bool IsLeapYear(int year);
 
 	//Last-Day overloads
+	int LastDay() const;
+	static int LastDay(int month, int year);
 
 	//print
+	string StringNumeric() const;
+	string StringLong() const; 
+	string StringDayMonth() const;
 
 private:
 
@@ -33,7 +42,8 @@ private:
 	int year;
 
 	//Help
-
+	static bool ValidDate(int M, int D, int Y);
+	static string MonthName(int M);
 };
 
 #endif
