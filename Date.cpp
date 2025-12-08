@@ -32,13 +32,16 @@ int Date::GetYear() const { return year; }
 //Leap Year object
 bool Date::IsLeapYear() const {
 
-	return false;
+	return IsLeapYear(year);
 }
 
 //Static
 bool Date::IsLeapYear(int year) {
 
-	return false;
+	if (year % 400 == 0) return true;
+	if (year % 100 == 0) return false;
+
+	return (year % 4 == 0);
 }
 
 //Last day
