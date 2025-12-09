@@ -94,15 +94,15 @@ string Date::MonthName(int m) {
 //Print
 string Date::StringNumeric() const {
 	
-	return "";
+	return to_string(month) + "/" + to_string(day) + "/" + to_string(year);
 }
 
 string Date::StringLong() const {
 	
-	return "";
+	return MonthName(month) + " " + to_string(day) + ", " + to_string(year);
 }
 
 string Date::StringDayMonth() const {
 
-	return "";
+	return to_string(day) + " " + MonthName(month) + " " + to_string(year);
 }
