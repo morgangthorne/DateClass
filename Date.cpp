@@ -80,7 +80,15 @@ bool Date::ValidDate(int m, int d, int y) {
 }
 
 string Date::MonthName(int m) {
-	return "";
+	static const string Names[] = {
+
+		"Invalid", "January", "February", "March", "April", "May", "June",
+		"July", "August", "September", "October", "November", "December"
+	
+	};
+
+	if (m < 1 || m > 12) return "Invalid";
+	return Names[m];
 }
 
 //Print
