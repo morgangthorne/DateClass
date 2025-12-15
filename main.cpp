@@ -33,7 +33,7 @@ int main() {
 	Date d4(2, 29, 2009);
 	cout << d4.StringNumeric() << endl;
 
-	cout << "\nPrinting format for 2'/29/2008:" << endl;
+	cout << "\nPrinting format for 2/29/2008:" << endl;
 	cout << d2.StringLong() << endl;
 	cout << d2.StringDayMonth() << endl;
 

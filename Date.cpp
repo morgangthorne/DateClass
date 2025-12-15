@@ -82,10 +82,15 @@ int Date::LastDay(int month, int year) {
 	if (month == 4 || month == 6 || month == 9 || month == 11)
 		return 30;
 
-	if (IsLeapYear(year))
-		return 29;
-	else
-		return 28;
+	if (month == 2) {
+
+		if (IsLeapYear(year))
+			return 29;
+		else
+			return 28;
+
+	}
+	return 0;
 }
 
 //Validation
