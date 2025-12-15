@@ -9,14 +9,36 @@ Date::Date(int m, int d, int y) {
 //Mutator
 void Date::SetDate(int m, int d, int y) {
 
-	if (!ValidDate(m, d, y)) {
+	if (m < 1 || m > 12) {
 		
-		cout << "Invalid Date!" << endl;
+		cout << "Month Invalid!" << endl;
 		month = 1;
 		day = 1;
 		year = 1900;
 		
 		return;
+	}
+
+	if (y <= 0) {
+		
+		cout << "Year Invalid!" << endl;
+		month = 1;
+		day = 1;
+		year = 1900;
+
+		return;
+	}
+
+	int Last = LastDay(m, y);
+
+	if (d < 1 || d > Last) {
+
+		cout << "Day Invalid!" << endl;
+		month = 1;
+		day = 1;
+		year = 1900;
+		return;
+
 	}
 
 	month = m;
