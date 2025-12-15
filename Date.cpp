@@ -14,7 +14,7 @@ void Date::SetDate(int m, int d, int y) {
 		cout << "Invalid Date!" << endl;
 		month = 1;
 		day = 1;
-		year = 2000;
+		year = 1900;
 		
 		return;
 	}
